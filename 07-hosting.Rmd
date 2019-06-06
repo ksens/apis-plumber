@@ -119,7 +119,11 @@ This Dockerfile would just extend the `trestletech/plumber` image in two ways. F
 
 You could then build your custom Docker image from this Dockerfile using the command `docker build -t myCustomDocker .` (where `.` -- the current directory -- is the directory where that Dockerfile is stored).
 
-Then you'd be able to use `docker run --rm -v `pwd`:/app myCustomDocker` to run your custom image, passing in your application's directory as a volume mounted at `/app`.
+Then you'd be able to use 
+```
+docker run --rm -v `pwd`:/app myCustomDocker
+``` 
+to run your custom image, passing in your application's directory as a volume mounted at `/app`.
 
 ### Automatically Run on Restart
 
